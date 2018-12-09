@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Theme Made By www.w3schools.com - No Copyright -->
+        <title>Word Puzzle Solver</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+         body {
+             font: 16px Montserrat, sans-serif;
+             line-height: 1.8;
+             color: #f5f6f7;
+         }
+         p {font-size: 16px;}
+         .margin {margin-bottom: 45px;}
+         .bg-1 { 
+             background-color: #1abc9c; /* Green */
+             color: #000000;
+         }
+         .bg-2 { 
+             background-color: #474e5d; /* Dark Blue */
+             color: #ffffff;
+         }
+         .bg-3 { 
+             background-color: #ffffff; /* White */
+             color: #555555;
+         }
+         .bg-4 { 
+             background-color: #2f2f2f; /* Black Gray */
+             color: #fff;
+         }
+         .container-fluid {
+             padding-top: 70px;
+             padding-bottom: 70px;
+         }
+         .navbar {
+             padding-top: 15px;
+             padding-bottom: 15px;
+             border: 0;
+             border-radius: 0;
+             margin-bottom: 0;
+             font-size: 12px;
+             letter-spacing: 5px;
+         }
+         .navbar-nav  li a:hover {
+             color: #1abc9c !important;
+         }
+         .words {
+             background-color: #ffffff;
+             color: blue;
+             min-height: 70px;
+             width: 100%;
+         }
+        </style>
+    </head>
+    <body>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="/">WordPuzzle Solver</a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Puzzle</a></li>
+                        <li><a href="#">Words</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- First Container -->
+        <div class="container-fluid bg-1 text-center">
+            <div class="container">
+            <h3 class="margin">Solve WordScapes</h3>
+            
+            <form>
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <div class="form-group">
+                            <label for="chars">Puzzle characters:</label>
+                            <input class="form-control" type="text" name="chars" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="n">Word size (enter a digit):</label>
+                            <input class="form-control" type="number" name="n" required>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label for="c1">character1(optional)</label>
+                                <input class="form-control" type="text" name="c1">
+                                <label for="p1">position1(optional)</label>
+                                <input class="form-control" type="number" name="p1">
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="c2">character2(optional)</label>
+                                <input class="form-control" type="text" name="c2">
+                                <label for="p2">position2(optional)</label>
+                                <input class="form-control" type="number" name="p2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <p>we can put some ads here</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="submit">Get Words</button>
+                    </div>
+                </div>
+            </form>
+            <span></span>
+            </div>
+        </div>
+
+        <!-- Second Container -->
+        <div class="container-fluid bg-2 text-center">
+            <div class="container">
+                <h3 class="margin">Words Found</h3>
+                <div class="words" id="words-found"></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <button class="btn btn-default" id="refresh">REFRESH</button>
+                </div>
+            </div>
+        </div>
+       <!-- end second container-->
+
+        <!-- Third Container (Grid) 
+        <div class="container-fluid bg-3 text-center">    
+            <h3 class="margin">Where To Find Me?</h3><br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                </div>
+                <div class="col-sm-4"> 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                </div>
+                <div class="col-sm-4"> 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+                </div>
+            </div>
+        </div>
+        -->
+
+        <!-- Footer -->
+        <footer class="container-fluid bg-4 text-center">
+            <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
+        </footer>
+        <script> 
+         
+         // Attach an event for when the user submits the form
+         $('form').on('submit', function(event) {
+             // Prevent the page from reloading
+             var chars = $('input[name=chars]').val()
+             var word_size = $('input[name=n]').val()
+
+             var hint1 = 'c1='+$('input[name=c1]').val()+'&p1='+$('input[name=p1]').val();
+             var hint2 = 'c2='+$('input[name=c2]').val()+'&p2='+$('input[name=p2]').val();
+
+             $.ajax('/nwords?chars='+chars+'&n='+word_size+'&'+hint1+'&'+hint2, {
+                 success: (data) => {
+                     /* do something with the data */
+                     // console.log(data);
+                     var i;
+                     var text = '';
+                     for (i = 0; i < data.words.length; i++) { 
+                         text += data.words[i] + "  ";
+                     }
+                     $('#words-found').text(text)
+                 },
+                 error: (err) => {
+                     console.log(err)
+                }
+             });
+
+             event.preventDefault();
+             
+             // Set the text-output span to the value of the first input
+             // var $input = $(this).find('#chars');
+             // var chars = $input.val();
+             // var str = $( "form" ).serialize();
+             // $('#words-found').text(chars);
+         });
+         $('#refresh').click(function() {
+             location.reload();
+         });
+         
+        </script>
+
+    </body>
+</html>
